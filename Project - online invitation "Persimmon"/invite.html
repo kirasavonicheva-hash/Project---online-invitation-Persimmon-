@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Тебя пригласили 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="guest"><div class="phone" id="gPhone"></div></div>
+<script src="core.js"></script>
+<script>
+/* режим гостя */
+(function(){
+  if(location.hash.length<20){document.body.innerHTML='<div class="guest"><h2>Приглашение не найдено 💔</h2></div>';return}
+  try{
+    const c={...DEF,...JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(1)))))};
+    play(c,$("#gPhone"),c.intro!="none"?0:1,false);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>

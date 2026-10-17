@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пригласи на свидание 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="logo">💌 pinkvite</span>
+  <a href="#how">Как это работает</a><a href="#feat">Возможности</a><a href="#faq">Вопросы</a>
+  <a class="btn" href="create.html" style="padding:9px 20px">Создать</a>
+</div></nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Позови на свидание так, чтобы это <em>запомнилось</em></h1>
+      <p style="color:var(--mu);font-size:18px">Собери милое приглашение за пару минут и отправь ссылку. Человек откроет страницу, увидит твой вопрос и ответит прямо там. И всё это бесплатно.</p>
+      <a class="btn" href="create.html">Создать приглашение 💌</a>
+      <a class="btn w" href="#how">Как это работает</a>
+    </div>
+    <div class="phone" id="heroPhone"></div>
+  </div>
+
+  <section id="how">
+    <h2>Три шага до «Да»</h2>
+    <div class="grid">
+      <div class="card"><span class="num">1</span><b>Собери приглашение</b><p>Впиши вопрос, добавь картинку и варианты для свидания. Всё видно в живом превью.</p></div>
+      <div class="card"><span class="num">2</span><b>Скопируй ссылку</b><p>Получатель открывает страницу, говорит «Да» и сам выбирает дату, время и занятие.</p></div>
+      <div class="card"><span class="num">3</span><b>Узнай ответ</b><p>В конце человек нажимает «Отправить ответ» и присылает тебе итог. А кнопку «Нет»… ну, попробуй нажми 😏</p></div>
+    </div>
+  </section>
+
+  <section id="feat">
+    <h2>Мелочи, которые цепляют</h2>
+    <div class="grid">
+      <div class="card"><b>🧩 Конструктор из 5 экранов</b><p>Вопрос, подтверждение, дата и время, занятие, финал. Всё меняется и сразу видно в превью.</p></div>
+      <div class="card"><b>🖼️ Фото и гифки</b><p>Вставь ссылку на свою картинку или гифку для любого экрана.</p></div>
+      <div class="card"><b>📅 Календарь у получателя</b><p>Человек сам выбирает удобные дату и время.</p></div>
+      <div class="card"><b>🏃 Хитрая кнопка «Нет»</b><p>Убегает или уменьшается, а «Да» осыпает экран сердечками.</p></div>
+      <div class="card"><b>🔤 Переменные в тексте</b><p>{date}, {time} и {activity} сами подставятся в финальный экран.</p></div>
+      <div class="card"><b>🔔 Итог ответа</b><p>Ответ, выбранные дата, время, занятие и число попыток нажать «Нет» уходят одним сообщением.</p></div>
+    </div>
+  </section>
+
+  
+
+  <section>
+    <div class="free">
+      <h2>Создать и отправить: бесплатно</h2>
+      <p>Никаких подписок, регистраций и оплат.</p>
+      <a class="btn w" href="create.html">Создать приглашение</a>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Коротко о главном</h2>
+    <details><summary>Нужно ли регистрироваться?</summary><p>Нет. Всё собирается прямо на странице.</p></details>
+    <details><summary>Как я узнаю ответ?</summary><p>В конце гость нажимает «Отправить ответ», и сообщение с итогом приходит тебе в тот мессенджер, который он выберет.</p></details>
+    <details><summary>А если человек нажмёт «Нет»?</summary><p>Попробуй. Кнопка убегает или уменьшается, а число попыток попадёт в итоговое сообщение.</p></details>
+  </section>
+</div>
+<footer>Сделано с любовью 💗</footer>
+
+<script src="core.js"></script>
+<script>
+/* главная: телефон-демо */
+play({...DEF,img1:GIFS.hero||GIFS.s1,q:"Аня, пойдёшь со мной на свидание?"},$("#heroPhone"),1,true);
+</script>
+</body>
+</html>
